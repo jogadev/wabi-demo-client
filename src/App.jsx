@@ -15,7 +15,6 @@ function App() {
         loading: false,
         data
       })
-      console.log("About to change");
     })
   }, [])
 
@@ -24,8 +23,6 @@ function App() {
   if(state.loading){
     // load from backend
     // in the meantime, render a loading animation
-
-    console.log("Render loading");
     toRender = <img src="loading-png-gif.gif" className="loader" alt="Please wait"></img>
   }else{
     toRender = <Reports data={state.data}/>
